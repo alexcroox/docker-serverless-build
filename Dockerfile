@@ -4,7 +4,7 @@ MAINTAINER dev@hectare.farm
 USER root
 RUN apt-get --yes --force-yes update \
     && apt-get install --yes --force-yes curl \
-    && apt-get install bzip2 \
+    && apt-get install --yes --force-yes bzip2 \
     && echo "deb http://packages.dotdeb.org jessie all" > /etc/apt/sources.list.d/dotdeb.list \
     && curl -sS https://www.dotdeb.org/dotdeb.gpg | apt-key add - \
     && apt-get update -qq -y \
@@ -17,6 +17,6 @@ RUN apt-get --yes --force-yes update \
 
 # Install Nodejs
 RUN curl -sL https://deb.nodesource.com/setup_11.x | bash - &&\
-    apt-get install -y nodejs git &&\
+    apt-get install -y nodejs git --force-yes &&\
     npm install -g serverless &&\
     npm install -g appcenter-cli
