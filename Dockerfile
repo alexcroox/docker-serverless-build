@@ -16,7 +16,7 @@ RUN apt-get --yes --force-yes update \
     && pip3 install awscli --upgrade
 
 # Install Node.js
-RUN curl -sL https://deb.nodesource.com/setup_11.x | bash - &&
+RUN curl -sL https://deb.nodesource.com/setup_11.x | bash - &&\
     apt-get install -y nodejs git &&\
-    npm install -g serverless &&
+    npm install -g serverless &&\
     npm install -g appcenter-cli
