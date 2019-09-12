@@ -18,7 +18,7 @@ RUN apt-get --yes --force-yes -y update \
 # Install Nodejs
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - &&\
     apt-get install -y nodejs git --force-yes -y &&\
-    apt-get install chromium &&\
+    apt-get install chromium --force-yes -y &&\
     npm i -g lighthouse &&\
     npm install -g serverless &&\
     npm install -g appcenter-cli
