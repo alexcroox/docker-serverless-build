@@ -3,7 +3,7 @@ MAINTAINER dev@hectare.farm
 
 USER root
 RUN apt-get --yes --force-yes -y update \
-    && apt-get install --yes --force-yes -y curl gnupg bzip2 apt-transport-https \
+    && apt-get install --yes --force-yes -y curl gnupg bzip2 libcurl3-dev apt-transport-https \
     && echo "deb http://packages.dotdeb.org jessie all" > /etc/apt/sources.list.d/dotdeb.list \
     && curl -sS https://www.dotdeb.org/dotdeb.gpg | apt-key add - \
     && curl -sS https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
